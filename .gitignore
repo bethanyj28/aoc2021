@@ -1,3 +1,4 @@
-/target
-/debug
+**/target
+**/debug
 **/*.rs.bk
+**/.DS_STORE

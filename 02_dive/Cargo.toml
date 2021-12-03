@@ -1,5 +1,5 @@
 [package]
-name = "aoc2021"
+name = "dive"
 version = "0.1.0"
 authors = ["Bethany Janos <bethanyjanos28@gmail.com>"]
 edition = "2018"

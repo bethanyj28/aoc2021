@@ -5,6 +5,7 @@ use std::path::Path;
 fn main() {
     // day 1
     sonar_sweep();
+    // day 2
     dive();
 }
 

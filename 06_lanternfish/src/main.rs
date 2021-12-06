@@ -48,7 +48,6 @@ fn main() {
     let mut fish_count: u128 = 0;
     let base: u128 = 2;
     for fish in school {
-        println!("fish count: {}", fish_count);
         fish_count += base.pow((total_days - fish as u32)/6);
     }
 

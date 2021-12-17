@@ -5,7 +5,7 @@ use std::path::Path;
 
 fn main() {
     let mut grid: Vec<Vec<u32>> = Vec::new();
-    if let Ok(lines) = read_lines("./chiton_simple.txt") {
+    if let Ok(lines) = read_lines("./chiton.txt") {
         for line in lines {
             let mut row: Vec<u32> = Vec::new();
             if let Ok(row_str) = line {
@@ -31,10 +31,18 @@ fn main() {
             }
             let bg = big_grid.clone();
             if s_c >= grid[0].len() {
-                big_grid[s_r].push((bg[s_r][s_c - grid[0].len()] + 1) % 10);
+                let mut num = bg[s_r][s_c - grid[0].len()] + 1;
+                if num == 10 {
+                    num = 1;
+                }
+                big_grid[s_r].push(num);
                 continue;
             }
-            big_grid[s_r].push((bg[s_r - grid.len()][s_c] + 1) % 10);
+            let mut num = bg[s_r - grid.len()][s_c] + 1;
+                if num == 10 {
+                    num = 1;
+                }
+            big_grid[s_r].push(num);
         }
     }
 
